@@ -1,10 +1,13 @@
-import React from 'react';
-
-import './App.css';
+import React, { Fragment } from 'react';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import TodoBuilder from "./components/TodoBuilder/TodoBuilder";
+import './App.scss';
 
 function App() {
   return (
-   <div></div>
+   <Fragment>
+     <TodoBuilder/>
+   </Fragment>
   );
 }
 
