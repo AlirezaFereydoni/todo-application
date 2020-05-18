@@ -7,6 +7,7 @@ class ListItems extends Component {
         return(
             <div className={style.ListItems}>
                 <Item/>
+                <Item/>
             </div>
         )
     }

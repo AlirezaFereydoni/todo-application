@@ -1,13 +1,30 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+// Shabnam Font
+
+@font-face {
+  font-family: "Shabnam";
+  font-style: normal;
+  font-weight: 400, 500, 600, 700, 900;
+  src: url("./assets/fonts/Shabnam.eot") format("eot"),
+    url("./assets/fonts/Shabnam.ttf") format("truetype"),
+    url("./assets/fonts/Shabnam.woff") format("woff"),
+    url("./assets/fonts/Shabnam.woff2") format("woff2");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "Shabnam";
+  font-style: normal;
+  font-weight: bold;
+  src: url("./assets/fonts/Shabnam-Bold.eot") format("eot"),
+    url("./assets/fonts/Shabnam-Bold.ttf") format("truetype"),
+    url("./assets/fonts/Shabnam-Bold.woff") format("woff"),
+    url("./assets/fonts/Shabnam-Bold.woff2") format("woff2");
+}
+
+
+*,*::before,*::after {
+  font-family: Shabnam;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  
 }
