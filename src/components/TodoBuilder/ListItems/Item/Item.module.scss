@@ -1,6 +1,6 @@
 .Item {
-    padding: 0.7rem 0.5rem;
-    width: 60%;
+    padding: 0.5rem 1rem;
+    width: 85%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,15 +12,15 @@
 }
 
 .Check {
-    width: 0.7rem;
-    height: 0.7rem;
+    width: 0.5rem;
+    height: 0.5rem;
     border-radius: 50%;
     border:1px solid #555;
     display: inline-block;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
     padding: 0.5rem;
 
 
@@ -37,19 +37,12 @@
 }
 
 
-.Input {
-    outline: none;
-    padding: 0.5rem 0;
-    width: 95%;
-    border: none;
-    color: #555;
 
-    &.checked {
-        text-decoration: line-through;
-    }
-    
-    
+
+.Remove {
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    display: inline-block;
+    color:#c80000;
+    cursor: pointer;
+
 }
-
-
-

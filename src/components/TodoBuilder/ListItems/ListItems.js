@@ -6,6 +6,7 @@ class ListItems extends Component {
     render(){
         return(
             <div className={style.ListItems}>
+                <h1 className={style.Title}>To-Do List</h1>
                 <Item/>
                 <Item/>
             </div>
