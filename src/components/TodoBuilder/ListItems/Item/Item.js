@@ -19,7 +19,7 @@ const Item = (props) => {
 
             
 
-            <Input type="text" checked={check} />
+            <Input type="text" value={props.value} checked={check} />
 
             <FontAwesomeIcon icon={faTrash} className={`${style.Remove}`} onClick={props.removed}/>
             
