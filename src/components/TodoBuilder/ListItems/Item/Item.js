@@ -17,8 +17,6 @@ const Item = (props) => {
                 <FontAwesomeIcon icon={faCheck} className={` ${style.fas} ${check?style.block:null}`}/>
             </span>
 
-            
-
             <Input type="text" value={props.value} checked={check} />
 
             <FontAwesomeIcon icon={faTrash} className={`${style.Remove}`} onClick={props.removed}/>

@@ -13,7 +13,7 @@ const initialState = [
 
 const reducer = (state = initialState,action) => {
     switch(action.type) {
-        case "ADD_TODO": return [
+        case "ADD_ITEM": return [
             ...state,
             {
                 id:state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
@@ -21,6 +21,10 @@ const reducer = (state = initialState,action) => {
                 completed:false
 
             }
+        ]
+
+        case "DELETE_ITEM": return [
+            state.filter(item => item.id !== action.id)
         ]
         
         default: return state

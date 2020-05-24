@@ -18,7 +18,7 @@ const AddItems =(props) => {
 
     return (
         <div className={style.AddItems}>
-            <Input value={value} changed={event => setValue(event.target.value)} />
+            <Input value={value} changed={event => setValue(event.target.value)} keyUp={(e)=> e.keyCode === 13 ? addTodoHandler() : null} />
             <Button clicked={addTodoHandler}>Add</Button>
             
         </div>
@@ -28,7 +28,7 @@ const AddItems =(props) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onAddItem : (textVal)=> dispatch(actions.addTodo(textVal))
+        onAddItem : (textVal)=> dispatch(actions.addItem(textVal))
     }
 }
 
