@@ -1,35 +1,34 @@
+import * as actionTypes from "./../actions/actionTypes";
 
-
-const initialState = [
-    {
-        id:null,
-        text:"",
-        completed:false
-    }
-]
-    
+const initialState = [];
+let taskId = 0;   
 
 
 
 const reducer = (state = initialState,action) => {
+
     switch(action.type) {
-        case "ADD_ITEM": return [
+        case actionTypes.ADD_ITEM : return [
             ...state,
             {
-                id:state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
-                text :action.text,
-                completed:false
-
+                id: ++taskId,
+                text:action.text,
+                complete:false
             }
         ]
-
-        case "DELETE_ITEM": return [
-            state.filter(item => item.id !== action.id)
+        case actionTypes.REMOVE_ITEM: return [
+            ...state.filter(item=>item.id!== action.id)
         ]
-        
-        default: return state
-        
+        case actionTypes.COMPLETE_ITEM: return [
+            ...state.map(item=> {
+               return item.id === action.id ? item.complete=!item.complete : null
+            })
+        ]
+        default : return state
     }
-}
+
+
+
+    }
 
 export default reducer;

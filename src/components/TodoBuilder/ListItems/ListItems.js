@@ -8,7 +8,7 @@ class ListItems extends Component {
 
 
     itemRemoveHandler = (itemId) => {
-        this.props.onDeleteItem(itemId)
+        this.props.onRemoveItem(itemId)
         
     }
 
@@ -17,7 +17,7 @@ class ListItems extends Component {
         return(
             <div className={style.ListItems}>
                 <h1 className={style.Title}>To-Do List</h1>
-                {this.props.onAddTodo.map( item => {
+                {this.props.store.map( item => {
                     return <Item value={item.text} key={item.id} removed={()=> this.itemRemoveHandler(item.id)}/>
                 })}
             </div>
@@ -28,13 +28,13 @@ class ListItems extends Component {
 
 const mapStateToProps = state => {
     return {
-        onAddTodo: state
+        store: state
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        onDeleteItem: (id)=> dispatch(actions.deleteItem(id))
+        onRemoveItem: (id)=> dispatch(actions.removeItem(id))
     }
 }
 

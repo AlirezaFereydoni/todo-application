@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import TodoBuilder from "./components/TodoBuilder/TodoBuilder";
-import './App.scss';
+import "./index.scss";
 
 function App() {
   return (
