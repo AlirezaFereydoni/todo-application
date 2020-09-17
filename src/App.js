@@ -1,13 +1,10 @@
-import React, { Fragment } from 'react';
-import TodoBuilder from "./components/TodoBuilder/TodoBuilder";
-import "./index.scss";
+
+import React from "react";
+import TodoBuilder from './containers/TodoBuilder';
+
 
 function App() {
-  return (
-   <Fragment>
-     <TodoBuilder/>
-   </Fragment>
-  );
+  return <TodoBuilder/>
 }
 
 export default App;
