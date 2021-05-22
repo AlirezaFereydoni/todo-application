@@ -1,8 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Production Version
-
-You can access to production version of app :
+## Live Version
 
 https://alirezafereydoni.github.io/ToDo-Application/
 
